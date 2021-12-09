@@ -168,8 +168,8 @@ ORDER BY APPT_PAPMI_DR->PAPMI_No
             }
 
 
-
-            foreach(var item in appDict)
+            var sortedAppDict = appDict.OrderBy(x => x.Key);
+            foreach (var item in sortedAppDict)
             {
                 Console.WriteLine(); Console.WriteLine();
                 Console.WriteLine(item.Key);
@@ -181,11 +181,6 @@ ORDER BY APPT_PAPMI_DR->PAPMI_No
                 }
 
             }
-
-
-
-
-
 
 
         }
